@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import './assets/stylesheets/style.scss';
 import SimpleScene from './scenes/simple-scene';
 import config from './config/config';
 import Boot from './scenes/boot';
