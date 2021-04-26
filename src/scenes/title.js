@@ -9,6 +9,7 @@ class Title extends Phaser.Scene {
   }
 
   create() {
+    this.add.image(100, 100, 'player');
   }
 }
 
