@@ -40,3 +40,5 @@ const getScores = async (validation) => {
   }
   return false;
 };
+
+export { validateInput, postScore, getScores };
