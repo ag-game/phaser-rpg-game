@@ -8,6 +8,8 @@ class Game extends Phaser.Scene {
     super('Game');
   }
 
+  // eslint-disable-next-line no-unused-vars
+  // eslint-disable-next-line class-methods-use-this
   collectGem(player, gem) {
     gem.disableBody(true, true);
     this.score += 10;
@@ -33,20 +35,27 @@ class Game extends Phaser.Scene {
     this.score = 0;
 
     // Platforms
-    this.platforms = this.physics.add.group(createPlatform(4, 0, 200, width));
+    this.platforms = this.physics.add.group(createPlatform(2, 0, 230, width));
 
-    this.atlasTexture = this.textures.get('terrain');
-    this.frames = this.atlasTexture.getFrameNames();
+    // this.atlasTexture = this.textures.get('terrain');
+    // this.frames = this.atlasTexture.getFrameNames();
 
     this.gems = this.physics.add.group(createGem(1, -50, 0));
-    // console.log(this.gems);
 
     // Player
-    this.player = this.physics.add.image(0, 0, 'player');
+    this.player = this.physics.add.image(0, 0, 'pirate');
+    this.player = this.physics.add.sprite(30, 0, 'pirate');
+    this.player_anim = this.cache.json.get('pirate_anim');
+    this.anims.fromJSON(this.player_anim);
+    this.player.anims.play('idle');
+
     this.player.setOrigin(0, 0);
     this.player.setGravityY(gameOptions.playerGravity);
     this.player.doubleJump = null;
-    this.player.setScale(0.5);
+    this.player.setScale(1.3);
+    this.player.body.setSize(25, 25);
+
+
 
     // Cursors
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -69,13 +78,18 @@ class Game extends Phaser.Scene {
 
     if (this.cursors.left.isDown) {
       this.player.setVelocityX(-160);
-      // this.player.anims.play('left', true);
+      this.player.flipX = true;
+      this.player.anims.play('run', true);
     } else if (this.cursors.right.isDown) {
       this.player.setVelocityX(160);
-      // this.player.anims.play('right', true);
+      this.player.flipX = false;
+      this.player.anims.play('run', true);
+    } else if (this.cursors.up.isDown) {
+      this.player.setVelocityX(0);
+      this.player.anims.play('jump', true);
     } else {
       this.player.setVelocityX(0);
-      // this.player.anims.play('turn');
+      this.player.anims.play('idle', true);
     }
 
     if (Phaser.Input.Keyboard.JustDown(this.cursors.up)) {

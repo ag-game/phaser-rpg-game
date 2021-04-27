@@ -7,8 +7,8 @@ const createPlatform = (repeat, x, y, width) => ({
     stepX: 300,
   },
   setScale: {
-    x: 1,
-    y: 1,
+    x: 1.3,
+    y: 1.3,
   },
   active: true,
   visible: true,
@@ -18,7 +18,7 @@ const createPlatform = (repeat, x, y, width) => ({
   frictionX: 1,
   runChildUpdate: (element) => {
     element.x = width;
-    element.y = (Math.random() * 100) + 150;
+    element.y = (Math.random() * 138) + y;
   },
 });
 
