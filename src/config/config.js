@@ -5,6 +5,7 @@ const config = {
   parent: 'content',
   width: 680,
   height: 400,
+  pixelArt: true,
   physics: {
     default: 'arcade',
     arcade: {
@@ -24,4 +25,4 @@ const gameOptions = {
   jumps: 2,
 };
 
-export {config, gameOptions};
+export { config, gameOptions };

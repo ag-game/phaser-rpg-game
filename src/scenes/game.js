@@ -8,8 +8,6 @@ class Game extends Phaser.Scene {
     super('Game');
   }
 
-  // eslint-disable-next-line no-unused-vars
-  // eslint-disable-next-line class-methods-use-this
   collectGem(player, gem) {
     console.log(gem.anims);
     gem.play('collect');
@@ -47,7 +45,6 @@ class Game extends Phaser.Scene {
     this.gems.playAnimation('rotate');
 
     // Player
-    this.player = this.physics.add.image(0, 0, 'pirate');
     this.player = this.physics.add.sprite(30, 0, 'pirate');
     this.anims.fromJSON(this.cache.json.get('pirate_anim'));
     this.player.anims.play('idle', true);
@@ -57,8 +54,6 @@ class Game extends Phaser.Scene {
     this.player.doubleJump = null;
     this.player.setScale(1.3);
     this.player.body.setSize(25, 25);
-
-
 
     // Cursors
     this.cursors = this.input.keyboard.createCursorKeys();

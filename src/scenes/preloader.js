@@ -14,6 +14,7 @@ import diamondAnim from '../assets/images/diamond/diamond_anim.json';
 import diamond from '../assets/images/diamond/diamond_atlas.json';
 import diamondPng from '../assets/images/diamond/diamond.png';
 
+
 class Preloader extends Phaser.Scene {
   constructor() {
     super('Preloader');
