@@ -19,7 +19,6 @@ class GameManager extends Phaser.Game {
     this.scene.add('Title', Title);
     this.scene.add('Game', Game);
     this.scene.add('GameOver', GameOver);
-    this.scene.start('GameOver');
     this.scene.add('Score', Score);
     this.scene.start('Boot');
   }

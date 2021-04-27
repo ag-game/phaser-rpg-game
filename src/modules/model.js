@@ -7,7 +7,7 @@ class Model {
     this._musicOn = true;
     this._bgMusicPlaying = false;
     this._score = 0;
-    this._scoreValidation = false;
+    this._allScores = null;
   }
 
   set musicOn(value) {
@@ -41,13 +41,14 @@ class Model {
   get score() {
     return this._score;
   }
-  /*
-  set scoreValidation(value) {
-    this._scoreValidation = value;
+  
+  set allScores(values) {
+    this._allScores = values;
   }
-  get scoreValidation() {
-    return this._scoreValidation;
-  } */
+
+  get allScores() {
+    return this._allScores;
+  }
 }
 
 export default Model;
