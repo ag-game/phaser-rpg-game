@@ -38,7 +38,7 @@ class Game extends Phaser.Scene {
     this.atlasTexture = this.textures.get('terrain');
     this.frames = this.atlasTexture.getFrameNames();
 
-    this.gems = this.physics.add.group(createGem(20, 0, 0));
+    this.gems = this.physics.add.group(createGem(1, -50, 0));
     // console.log(this.gems);
 
     // Player
@@ -91,7 +91,12 @@ class Game extends Phaser.Scene {
     this.platforms.getChildren().forEach(x => {
       if (x.x < -100) {
         this.platforms.runChildUpdate(x);
+        this.gems.runChildUpdate(this.gems, x.x, x.y);
       }
+    });
+
+    this.gems.getChildren().forEach(x => {
+      if (x.x < -24) x.disableBody(true, true);
     });
 
     if (this.player.y > this.sys.game.config.height) this.scene.start('Game');
