@@ -9,6 +9,7 @@ class Game extends Phaser.Scene {
     super('Game');
   }
 
+  // eslint-disable-next-line class-methods-use-this
   collectGem(_player, gem) {
     gem.disableBody(true, true);
     this.score += 10;
@@ -17,7 +18,7 @@ class Game extends Phaser.Scene {
 
   create() {
     const { width, height } = this.sys.game.config;
-    this.saveScore = this.sys.game.globals;
+    this.saveScore = this.sys.game.globals.model;
 
     // Backgrounds
     const bgAttributes = {

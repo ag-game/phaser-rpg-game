@@ -8,7 +8,7 @@ const createGem = (repeat, x, y) => ({
   },
   setScale: {
     x: 1.5,
-    y: 1,
+    y: 1.5,
   },
   allowGravity: false,
   runChildUpdate: (group, posX, posY) => {

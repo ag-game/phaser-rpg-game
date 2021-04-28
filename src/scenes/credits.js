@@ -9,7 +9,7 @@ export default class Credits extends Phaser.Scene {
     const { height, width } = this.sys.game.config;
 
     this.creditsText = this.add.text(0, 0, 'Credits', { fontSize: '32px', fill: '#fff' });
-    this.madeByText = this.add.text(0, 0, 'Created By: Álvaro Andrés Ruiz. Github: @alvarorf', { fontSize: '26px', fill: '#fff' });
+    this.madeByText = this.add.text(0, 0, 'Created By: Álvaro Andrés Ruiz', { fontSize: '26px', fill: '#fff' });
     this.zone = this.add.zone(
       width / 2, height / 2,
       width, height,
@@ -43,6 +43,7 @@ export default class Credits extends Phaser.Scene {
       duration: 8000,
       delay: 1000,
       onComplete: () => {
+        // eslint-disable-next-line no-unused-expressions
         this.madeByTween.destroy;
         this.scene.start('Title');
       },

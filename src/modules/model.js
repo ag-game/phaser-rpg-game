@@ -1,8 +1,6 @@
+/* eslint-disable no-underscore-dangle */
 class Model {
   constructor() {
-    this.soundOn = true;
-    this.musicOn = true;
-    this.bgMusicPlaying = false;
     this._soundOn = true;
     this._musicOn = true;
     this._bgMusicPlaying = false;
@@ -41,7 +39,7 @@ class Model {
   get score() {
     return this._score;
   }
-  
+
   set allScores(values) {
     this._allScores = values;
   }

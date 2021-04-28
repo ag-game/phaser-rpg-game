@@ -16,7 +16,7 @@ class Title extends Phaser.Scene {
     this.title2.setScale(3);
 
     // Game
-    this.gameButton = new Button(this, width / 2 + 20, 'greenButton1', 'greenButton2', 'Start', 'Game', 3);
+    this.gameButton = new Button(this, width / 2, height / 2 + 20, 'greenButton1', 'greenButton2', 'Start', 'Game', 3);
 
     // Options
     this.optionsButton = new Button(this, width / 2, height / 2 + 75, 'greenButton1', 'greenButton2', 'Options', 'Options', 3);

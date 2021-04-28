@@ -13,7 +13,7 @@ const errHandler = () => new Response(JSON.stringify({ message: 'City not found.
 const postScore = async (data) => {
   let response = '';
   if (data) {
-    response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/55wl7tfhhy2GwkyVLjmS/scores/', {
+    response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1jFd06GQ0jNaUanltu4w/scores/', {
       mode: 'cors',
       method: 'POST',
       body: JSON.stringify(data),
@@ -23,16 +23,16 @@ const postScore = async (data) => {
     }).catch(errHandler);
   }
   const score = await response.json();
-  if (response === 'Leaderboard score created correctly.') {
+  if (score.result === 'Leaderboard score created correctly.') {
     return score;
   }
   return false;
 };
 
 const getScores = async () => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/55wl7tfhhy2GwkyVLjmS/scores/', { mode: 'cors', method: 'GET' }).catch(errHandler);
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/1jFd06GQ0jNaUanltu4w/scores/', { mode: 'cors', method: 'GET' }).catch(errHandler);
   const scores = await response.json();
-  if (score.result === 'Leaderboard score created correctly.') {
+  if (scores.result) {
     return scores;
   }
   return false;
@@ -51,4 +51,6 @@ const sortScores = (a, b) => {
   return comparison;
 };
 
-export { validateInput, postScore, getScores, sortScores };
+export {
+  validateInput, postScore, getScores, sortScores,
+};

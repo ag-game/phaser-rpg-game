@@ -9,6 +9,7 @@ const creator = (parent, newElement, position) => {
 };
 
 const createTable = () => {
+  // eslint-disable-next-line prefer-destructuring
   const container = document.getElementById('content').children[0];
   const table = creator(container, 'table', 'append');
   const tHead = creator(table, 'thead', 'append');
