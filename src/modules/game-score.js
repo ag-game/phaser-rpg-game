@@ -8,7 +8,7 @@ const validateInput = (input) => {
   return false;
 };
 
-const errHandler = () => new Response(JSON.stringify({ message: 'The score could not be saved.' }));
+const errHandler = () => null;
 
 const postScore = async (data) => {
   let response = '';
@@ -30,11 +30,19 @@ const postScore = async (data) => {
 };
 
 const getScores = async () => {
-  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/55wl7tfhhy2GwkyVLjmS/scores/', { mode: 'cors', method: 'GET' }).catch(errHandler);
-  const scores = await response.json();
-  if (scores.result) {
-    return scores;
+  const response = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/55wl7tfhhy2GwkyVLjmS/scores/', {
+    mode: 'cors',
+    method: 'GET',
+  }).catch(errHandler);
+
+
+  if (response) {
+    const scores = await response.json();
+    if (scores.result) {
+      return scores;
+    }
   }
+
   return false;
 };
 
