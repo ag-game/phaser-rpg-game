@@ -27,9 +27,9 @@
   "author": "Álvaro Ruiz <aaruizf@unal.edu.co>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alvarorf/weather-api/issues"
+    "url": "https://github.com/alvarorf/phaser-rpg-game/issues"
   },
-  "homepage": "https://github.com/alvarorf/weather-api#readme",
+  "homepage": "https://github.com/alvarorf/phaser-rpg-game#readme",
   "devDependencies": {
     "@babel/core": "^7.13.15",
     "@babel/preset-env": "^7.13.15",
