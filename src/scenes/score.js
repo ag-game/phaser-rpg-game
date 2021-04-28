@@ -24,6 +24,7 @@ class Score extends Phaser.Scene {
     } else {
       this.add.text(width / 2, height / 2, 'There was an error while\ntrying to get the scores.', { fill: '#fff' });
     }
+
     this.restart = new Button(this, 80, height / 2, 'greenButton1', 'greenButton2', 'RESTART', 'Game', 3);
     this.home = new Button(this, width - 80, height / 2, 'greenButton1', 'greenButton2', 'HOME', 'Boot', 3);
   }
