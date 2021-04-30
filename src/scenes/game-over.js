@@ -78,8 +78,7 @@ class GameOver extends Phaser.Scene {
           this.scene.start('Score');
         }
       });
-
-  } else {
+    } else {
       this.add.text(230, 180, 'Click on the button\nto advance.', {
         fontFamily: 'Arial',
         fontSize: '27px',

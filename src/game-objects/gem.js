@@ -12,7 +12,7 @@ const createGem = (repeat, x, y) => ({
   },
   allowGravity: false,
   runChildUpdate: (group, posX, posY) => {
-    group.getChildren().forEach(element => {
+    group.getChildren().forEach((element) => {
       if (!element.active) {
         element.enableBody(true, posX + 48, posY - 48, true, true);
         element.setVelocityX(-200);

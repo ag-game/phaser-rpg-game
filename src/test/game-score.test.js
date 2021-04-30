@@ -1,4 +1,3 @@
-
 import 'babel-polyfill';
 import {
   validateInput, postScore, getScores, sortScores,

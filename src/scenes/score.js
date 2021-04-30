@@ -3,7 +3,6 @@ import Button from '../game-objects/button';
 import { sortScores } from '../modules/game-score';
 import { createTable, addValuesToTable } from '../modules/dom';
 
-
 class Score extends Phaser.Scene {
   constructor() {
     super('Score');

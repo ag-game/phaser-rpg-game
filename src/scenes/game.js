@@ -98,10 +98,10 @@ class Game extends Phaser.Scene {
   }
 
   startGame() {
-    this.platforms.getChildren().forEach(x => {
+    this.platforms.getChildren().forEach((x) => {
       x.body.setVelocityX(-200);
     });
-    this.clouds.getChildren().forEach(x => {
+    this.clouds.getChildren().forEach((x) => {
       x.body.setVelocityX(-50);
     });
   }
@@ -144,18 +144,18 @@ class Game extends Phaser.Scene {
       }
     }
 
-    this.platforms.getChildren().forEach(x => {
+    this.platforms.getChildren().forEach((x) => {
       if (x.x < -100) {
         this.platforms.runChildUpdate(x);
         this.gems.runChildUpdate(this.gems, x.x, x.y);
       }
     });
 
-    this.gems.getChildren().forEach(x => {
+    this.gems.getChildren().forEach((x) => {
       if (x.x < -24) x.disableBody(true, true);
     });
 
-    this.clouds.getChildren().forEach(x => {
+    this.clouds.getChildren().forEach((x) => {
       if (x.x < -448) {
         this.clouds.runChildUpdate(x);
       }

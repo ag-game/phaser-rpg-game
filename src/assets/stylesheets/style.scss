@@ -10,7 +10,9 @@ body {
 
 #content {
   width: fit-content;
+  /* stylelint-disable csstree/validator */
   height: fit-content;
+  /* stylelint-enable csstree/validator */
   margin: auto;
 
   div {
