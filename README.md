@@ -1,8 +1,8 @@
 # RPG Adventure
 
-This project consist on building a video game using JavaScript and the game engine Phaser.
+This project consists of building a video game using JavaScript and the game engine Phaser.
 
-The game is about a pirate tha needs to collect the red diamonds that appear over the plarforms while jumping between then and avoiding to fall.
+The game is about a pirate that needs to collect the red diamonds that appear over the platforms while jumping between them and avoiding to fall.
 
 ## Screenshot
 
@@ -13,7 +13,7 @@ The game is about a pirate tha needs to collect the red diamonds that appear ove
 
 ## :earth_americas: Live Demo
 
-You can try it [here]().
+You can try it [here](https://pirate-adventure-alvarorf.netlify.app/).
 
 ## :hammer:  Built With
 
@@ -61,7 +61,7 @@ To run the project:
 - If you fall from the platforms you will lose.
 
 ## :gem:  Features
-* The user que save the score by providing an user name.
+* The user can save the score by providing an username.
 * It has a leaderboard.
 * Has background music.
 * The user can deactivate the background music.
