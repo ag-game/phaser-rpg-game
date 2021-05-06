@@ -86,7 +86,7 @@ To run the project:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/alvarorf/phaser-rpg-game/issues).
 
 1. Fork this repository.
 2. Create a branch: git checkout -b <branch_name>
@@ -105,4 +105,4 @@ Background music by [Fesliyan Studios](https://www.fesliyanstudios.com/).
 
 ## 📝  License
 
-This project is [MIT](lic.url) licensed.
+This project is [MIT](https://github.com/alvarorf/phaser-rpg-game/blob/phaser-rpg/LICENSE) licensed.

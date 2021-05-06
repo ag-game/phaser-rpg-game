@@ -12,7 +12,6 @@ class Game extends Phaser.Scene {
     this.score += 10;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   collectGem(_player, gem) {
     gem.disableBody(true, true);
     this.updateScore();
@@ -54,7 +53,7 @@ class Game extends Phaser.Scene {
     this.gems.playAnimation('rotate');
 
     // Player
-    this.player = this.physics.add.sprite(30, 0, 'pirate');
+    this.player = this.physics.add.sprite(50, 0, 'pirate');
     this.anims.fromJSON(this.cache.json.get('pirate_anim'));
     this.player.anims.play('idle', true);
 
