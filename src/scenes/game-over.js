@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from '../phaser';
 import { validateInput, postScore, getScores } from '../modules/game-score';
 
 class GameOver extends Phaser.Scene {

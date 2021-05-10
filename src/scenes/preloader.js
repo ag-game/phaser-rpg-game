@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from '../phaser';
 import title1 from '../assets/images/ui/title1.png';
 import title2 from '../assets/images/ui/title2.png';
 import greenButton1 from '../assets/images/ui/button-green1.png';

@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from '../phaser';
 import createPlatform from '../game-objects/platform';
 import createGem from '../game-objects/gem';
 import createCloud from '../game-objects/cloud';

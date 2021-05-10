@@ -1,4 +1,4 @@
-import Phaser from 'phaser';
+import Phaser from '../phaser';
 import Button from '../game-objects/button';
 import { sortScores } from '../modules/game-score';
 import { createTable, addValuesToTable } from '../modules/dom';
